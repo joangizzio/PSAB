@@ -11,7 +11,7 @@ from pdbParse import loadPDB
 PSAdir='/se2.02'
 pdbpath='/Theseus'
 L=232
-alnpath='/msa'
+alnpath='/hmmer_length232'
 
 
 def show(name1, name2, alnpath=alnpath, PSAdir=PSAdir, pdbpath=pdbpath, L=232, seq1color='ruby', seq2color='smudge', benchmarkcolor='yellow', querycolor='grey40'):
