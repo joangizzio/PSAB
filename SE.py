@@ -2,10 +2,12 @@ import sys, os
 from subprocess import call
 from numpy import *
 
-pdbnames = genfromtxt(str(sys.argv[1]), dtype=str)[1:,:]
-SEpath = str(sys.argv[2])
-pdbpath = str(sys.argv[3])
-pdbprefix = 'theseus_'
+"""Calls Byungkook Lee's Seed Extension program for a list of PDBs and their "names"; generates (N*(N-1)/2) fasta files for N PDBs and renames the files"""
+
+pdbnames = genfromtxt(str(sys.argv[1]), dtype=str)[1:,:] 
+SEpath = str(sys.argv[2]) #the se program needs to be in this directory
+pdbpath = str(sys.argv[3]) #directory of PDB files which are superimposed
+pdbprefix = 'theseus_' #structural superposition programs usually put a prefix on the output PDB files
 
 
 def SE(pdbpairs, namepairs=[], SEpath=SEpath, pdbpath=os.path.join(pdbpath,pdbprefix)):

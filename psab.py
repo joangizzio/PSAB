@@ -283,7 +283,7 @@ def getPSA(seqAname, seqBname, PSAdir='../../../Alignment/Kinase/dfgin/se2.02/',
         matches[n] = k.isupper() and l.isupper()
     return array(zip(seqA, seqB)), (pdbA.tostring(), pdbB.tostring()), matches
 
-def alnbenchmark(seqAname, seqBname, PSAdir='../../../Alignment/Kinase/dfgin/se2.02/', alnpath_=None, pdbpath=MLSpath, headerlength=15, L=L, MSA_=None, indmaps_=None, pdb2alnmap_=None):
+def alnbenchmark(seqAname, seqBname, PSAdir='../../../Alignment/Kinase/dfgin/se2.02/', alnpath_=None, pdbpath=pdbpath, headerlength=15, L=L, MSA_=None, indmaps_=None, pdb2alnmap_=None):
     if alnpath_ == None:
 #        print 'MSA from '+alnpath
         msaparse = MSAparse(alnpath=alnpath, L=L)
